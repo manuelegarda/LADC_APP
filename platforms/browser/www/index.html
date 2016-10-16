@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data:; font-src 'self' data:;"/>
+    <script type="phonegap.js"></script>
+     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>   
+    <script type="text/javascript" src="js/build/iscroll-zoom.js"></script>
+     <link rel="stylesheet" type="text/css" href="js/jQueryMobile/jquery.mobile-1.4.5.min.css">
+     <link rel="stylesheet" type="text/css" href="css/index.css">
+       
+    <title>LADC_APP</title>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a" onload="onDeviceReady()">
+
+    <div id="home" data-role="page" data-url="panel-fixed-page1" >
+      
+       <div data-role="header">    
+       <div id="header">
+        <a href="#nav-menu" class="btn_menu"></a>
+        <h2 class=" ui-title"> LADC 2016</h2>
+       </div>
+    </div>
+    <div role="content" class="ui-content contenido" >
+        <img class="imglogo" src="img/icon.png">
+        <div class="cnt">
+        <button onclick="redirect()" class="rtn">  face</button>
+          <a  href="#dia" class="rtn">DAILY PROGRAM</a>
+           <a href="#tutorial" id="tutorial-btn" class="rtn">TUTORIALS</a>
+           <a href="#actividades" class="rtn" id="actividades-btn">SOCIAL ACTIVITIES</a>
+           <a href="#plenarias" class="rtn" id="btn_plenaria">KEYNOTES</a>
+       </div>
+    </div>
+      
+       
+    <div id="nav-menu" data-role="panel" data-position="left" data-display="reveal" class="adelante">
+        <ul data-role="listview" dat-inset="true">
+            <li data-role="list-divider" >MENU</li>
+            <li><a href="#speakers"   data-transition="slide">SPEAKERS</a></li>
+            <li><a href="#organizadores"   data-transition="slide">SPONSORED</a></li>
+            <li><a href="#mapas"   data-transition="slide">MAPS</a></li>
+            <li><a href="#acerca_de"   data-transition="slide">CREDITS</a></li>
+        </ul>
+    </div>
+    
+    <div id="dia" data-role="panel" data-position="right" data-display="reveal" >
+        <ul data-role="listview" dat-inset="true">
+            <li data-role="list-divider" >DAYS</li>
+            <li><a href="#martes"   id="programwed" data-transition="slide">WEDNESDAY</a></li>
+            <li><a href="#miercoles" id="programthr"   data-transition="slide">THURSDAY</a></li>
+            <li><a href="#jueves"  id="prografri"  data-transition="slide">FRIDAY</a></li>            
+        </ul>
+    </div>
+     
+  </div>
+<!--inicio de social activities-->
+  <div data-role="page" id="actividades">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     SOCIAL ACTIVITIES</div>
+      <div class="cnt"> <div role="content"  id="contenido">
+           <ul data-role="listview" dat-inset="true" id="listaactiv">
+              
+           </ul>
+       </div></div>
+    </div>
+  <!--fin de social activities-->
+  <!--inicio de  tutorials-->
+    <div data-role="page" id="tutorial">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     TUTORIALS</div>
+                     <div class="cnt"> 
+                     <div role="content"  id="contenido">
+           <ul data-role="listview" dat-inset="true" id="lista" class="contenidotuto">
+              
+           </ul>
+       </div></div>
+      
+    </div>
+ <!--fin de  tutorials-->
+
+    <!--PROGRAMACION KEY NOTES -->
+    <div data-role="page" id="plenarias" data-transition="slide">
+       <div class="header">
+         <a href="#home"  class="pos"></a>
+                     KEYNOTES</div>
+        <div class="cnt"> <div role="content" class="ui-content" id="contenido"> 
+        <ul data-role="listview" dat-inset="true" id="listkeynote"> </ul>
+       </div></div>             
+      
+    </div>
+ <!--fin de keynotes-->
+
+<!--inicio daily programin wednesday-->
+    <div data-role="page" id="martes" data-transition="slide">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     WEDNESDAY</div>
+            <div class="cnt"> <div  data-position="fixed">
+         <div data-role="navbar" >
+           <ul>
+
+              <li><a href="#"  id="ses_wed" data-transition="slide">SESSIONS</a></li>
+             <li><a href="#" id="tuto_wed" data-transition="slide">TUTORIALS</a></li>
+           </ul>
+           <ul><li><a href="#"  id="wed_acti" data-transition="slide">ACTIVITIES</a></li>
+             <li><a href="#" id="wed_key" class="ui-btn-active" data-transition="slide">KEYNOTE</a></li></ul>
+         </div>
+          
+       </div>
+        <div data-role="content">
+          <ul data-role="listview" dat-inset="true" id="pro_wed"></ul>
+        </div></div>         
+       
+    </div>
+<!--fin daily programin wednesday-->
+
+<!--inicio daily programin thrusday-->
+<div data-role="page" id="miercoles" data-transition="slide">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     THURSDAY</div>
+
+      <div class="cnt">
+          <div data-role="navbar">
+           <ul>
+             <li><a href="#"  id="thru_ws"  data-transition="slide">SESSIONS</a></li>
+             <li><a href="#" id="thru_tuto" data-transition="slide">TUTORIALS</a></li>
+           </ul>
+         <ul>
+             <li><a href="#"  id="thru_act" data-transition="slide">ACTIVITIES</a></li>
+             <li><a href="#" id="thru_key" class="ui-btn-active" data-transition="slide">KEYNOTE</a></li>
+           
+          </ul> </div>    
+         <div data-role="content">
+          <ul data-role="listview" dat-inset="true" id="thrus_program"></ul>
+        </div>  
+      </div>   
+</div>
+<!--fin daily programin thursday-->
+
+<!--inicio daily programin friday-->
+<div data-role="page" id="jueves" data-transition="slide">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     FRIDAY</div>
+        <div class="cnt"><div  data-position="fixed">
+       <div data-role="navbar">
+           <ul>
+            <li><a href="#"  id="sesion_fri" data-transition="slide">SESSIONS</a></li>
+             <li><a href="#" id="fri_tuto" data-transition="slide">TUTORIALS</a></li>
+           </ul>
+         <ul>
+             <li><a href="#" id="fri_social" data-transition="slide">ACTIVITIES</a></li>
+             <li><a href="#" id="fri_key" data-transition="slide" class="ui-btn-active">KEYNOTE</a></li>
+           
+          </ul> </div>
+         <div data-role="content">
+          <ul data-role="listview" dat-inset="true" id="pro_friday" class="ui-btn-active" ></ul>
+        </div>
+       </div></div>             
+       
+</div>
+<!--fin daily programin friday-->
+
+
+<div data-role="page" id="acerca_de" data-transition="slide">
+          <div class="header">
+         <a href="#home"  class="pos"></a>
+                     CREDITS</div>
+      <div class="cnt"> <div role="content" class="ui-content" id="contenido">
+            <p>DEVELOPMENT BY: </p>
+           <div class="tarjeta">
+             <h3 class="nombre">Janier Alejandro Banguera Correa</h3>
+             <h3 class="correo">alejo95@unimayor.edu.co</h3>
+             <h3 class="movil">(+057) 313 419 9115</h3>
+           </div>
+           <div class="tarjeta">
+             <h3 class="nombre">Manuel Arturo Melo Legarda</h3>
+             <h3 class="correo">manuelegarda@unimayor.edu.co</h3>
+             <h3 class="movil">(+057) 317 853 8119</h3>
+           </div>
+           <center><img src="img/logounimayor.jpg" alt="logounimayor" width="200" height="200" class="logouni"></center>
+           
+       </div></div>
+    </div>
+   
+    <div data-role="page" id="mapas" data-transition="slide">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     MAPS</div>
+                     
+
+<div class="cnt">
+  <div data-role="navbar">
+           <ul class="bnn" >
+
+              <li><a href="#"  id="btn_mp1" class="ui-btn-active" data-transition="slide">MAP USB</a></li>
+             <li><a href="#" id="btn_mp2" data-transition="slide">ROUT MS HOTEL</a></li>
+           </ul>
+           <ul class="bnn"><li><a href="#"  id="btn_mp3" data-transition="slide">ROUT NH HOTEL</a></li>
+             <li><a href="#" id="btn_mp4"  data-transition="slide">BOQUERIA RESTAURANT</a></li></ul>
+         </div>
+     <div id="wrapper">
+  <div id="scroller">
+   
+      <img src="img/Mapa USB.png" id="mp1" width="100%" height="100%" > 
+      <img src="img/mp2.png" id="mp2" width="100%" height="100%" > 
+       <img src="img/mp3.png" id="mp3" width="100%" height="100%" > 
+       <img src="img/mp4.jpg" id="mp4" width="100%" height="90%" > 
+  </div>
+</div>
+   </div>
+
+    </div>
+    <div data-role="page" id="organizadores" data-transition="slide">
+       <div class="header">
+         <a href="#home"  class="pos"></a>
+                     SPONSORED</div>
+                     <br>
+                      <br>
+       <div class="cnt">
+          <center>
+        <h3>Sponsored By </h3>
+         <img src="img/unicauca.png" alt="unicauca" width="70%" height="50%" class="logosorga">
+        
+        <img src="img/descarga.jpg" alt="unisanbuenaventura" class="logosorga" width="100%" height="40%">
+        <h3>Co Sponsored By </h3>
+        <img src="img/cs_logo.jpg" alt="ieee" width="100%" height="40%" class="logosorga">
+        
+        <img src="img/logo-sbc.png" alt="sbc" class="logosorga" width="50%" height="70%">
+        
+        <img src="img/82904816.gif" alt="greensa" class="logosorga" width="100%" height="50%">
+        
+        </center>
+       </div>
+    </div>
+
+
+ <div data-role="page"  id="speakers" data-transition="slide">
+        <div class="header">
+         <a href="#home"  class="pos"></a>
+                     SPEAKERS</div>
+       
+        <div class="spkcont">
+           <div class="spkcont">
+        <div class="garlan" ></div>
+            <div class="tt">kjlkj</div>
+            <div class="biogra">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      </div>
+      <div class="spkcont">
+       <div class="ram" ></div>
+            <div class="tt">jkhkj</div>
+            <div class="biogra">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      </div>
+           
+      
+    </div>
+        </div>
+    
+    
+  
+</div>
+
+<div id="footer"></div>
+ <script type="text/javascript" src="js/informacion.js"></script>
+</body>
+
+</html> 
+  
