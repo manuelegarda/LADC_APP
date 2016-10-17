@@ -3,7 +3,7 @@ var ruta="http://localhost/ladc_web/php/";
 //
 function onDeviceReady()
 {
-    
+   
   myScroll = new IScroll('#wrapper', {
     zoom: true,
     scrollX: true,
@@ -15,12 +15,11 @@ $('#mp2').hide();
 $('#mp3').hide();
 $('#mp4').hide();
 }
-  function redirect(){
+ 
 
-     var ref = window.open('https://www.facebook.com/', '_blank', 'location=yes');
-     alert(ref);
-     ref.show();
-  }
+    
+
+  
 
 function orden(url,peti,lugar)
 {
