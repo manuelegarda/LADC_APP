@@ -3,11 +3,11 @@
     <name>LADC_APP</name>
     <description>Is app for ladc 2016 cali colombia.</description>
     <author email="support@phonegap.com" href="http://phonegap.com">PhoneGap Team</author>
+    <content src="index.html" />
     <icon src="icon.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <access origin="http://*.google.com" />
-    <content src="https://www.google.*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
@@ -15,4 +15,5 @@
     <allow-intent href="geo:*" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
+    <preference name="stay-in-webview" value="true" />
 </widget>

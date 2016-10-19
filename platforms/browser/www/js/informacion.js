@@ -1,16 +1,17 @@
 
-var ruta="http://localhost/ladc_web/php/";
-//
+var ruta="http://190.5.199.19/ladc/php/";
+
 function onDeviceReady()
 {
-   
-  myScroll = new IScroll('#wrapper', {
+ 
+    myScroll = new IScroll('#wrapper', {
     zoom: true,
     scrollX: true,
     scrollY: true,
     mouseWheel: true,
     wheelAction: 'zoom'
   });
+
 $('#mp2').hide();
 $('#mp3').hide();
 $('#mp4').hide();
@@ -76,6 +77,15 @@ function programacion(url,peti,lugar,dato,dia)
             }
         });
 }
+$('#actu').on('tap',function(){
+  myScroll = new IScroll('#wrapper', {
+    zoom: true,
+    scrollX: true,
+    scrollY: true,
+    mouseWheel: true,
+    wheelAction: 'zoom'
+  });
+})
 $('#btn_mp2').on('tap',function(){
   $('#mp1').hide('slow/400/fast');
   $('#mp3').hide('slow/400/fast');

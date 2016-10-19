@@ -289,7 +289,7 @@ li
 .spkcont
 {
   width: 100%;
-  margin-top: 50px;
+
   height:450px;
 }
 .garlan{
@@ -337,10 +337,10 @@ background: rgba(192, 57, 43,1);
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 40px;
   line-height: 45px;
   background: rgba(231, 76, 60,.9);
-  padding: 0;
+  padding-top: 3%;
   color: #eee;
   font-size: 20px;
   text-align: center;
@@ -357,7 +357,7 @@ background: url(../img/home.png);
   background-size:100% 100%;
 z-index: 5;}
 
-.cnt{padding-top: 32px;}
+.cnt{padding-top: 40px;}
 
  
 
@@ -377,4 +377,17 @@ z-index: 5;}
 color: #eee;
  background: grey;
 }
-      
+.hide{
+  overflow: hidden;
+}    
+.contentsp
+{
+  margin-top: 50px;
+}
+.adverten
+{
+  margin: 0;
+  text-align: center;
+  background: rgba(192, 57, 43,1);
+ color: #eee;
+}
